@@ -1,16 +1,20 @@
 {
   "name": "solstice-assessment",
   "version": "1.0.0",
-  "description": "A customer and account browser",
+  "description": "Solstice customer and account browser",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm i --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Eric Retzloff",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
